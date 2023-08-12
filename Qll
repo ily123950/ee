@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 3.")
+game.Players:Chat("h \n \n \n \n \n \n 4.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -166,7 +166,6 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         local letter = lowerMsg:sub(4, 4)
         game.Players:Chat("respawn " .. letter)
         wait(1)
-        game.Players:Chat(".fixcam")
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485, 4, 478)
         wait(0.3)
         game.Players:Chat("tp " .. letter .. " me")
