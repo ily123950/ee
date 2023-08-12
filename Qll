@@ -129,7 +129,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         local letter = lowerMsg:sub(5, 5)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485, 4, 478)
         wait(0.3)
-        game.Players:Chat("tp me " .. letter)
+        game.Players:Chat("tp " .. letter .. " me")
     elseif lowerMsg == ".rc" then
         game.Players:Chat("h \n \n \n \n \n \n please join another server.")
         game.Players:Chat("respawn others")
