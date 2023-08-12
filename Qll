@@ -116,6 +116,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat(".house")
         game.Players:Chat("h \n \n \n \n \n \n i think server is laggy.")
         elseif lowerMsg == ".vis" then
+        game.Players:Chat(".iyc god me")
+        wait (0.2)
+        game.Players:Chat(".nameless")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ily123950/orbitv3/main/briker"))()
     elseif lowerMsg:sub(1, 3) == ".tm" and #lowerMsg > 3 then
         local letter = lowerMsg:sub(5, 5)
