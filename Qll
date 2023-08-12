@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 1.")
+game.Players:Chat("h \n \n \n \n \n \n 2.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -166,6 +166,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         local letter = lowerMsg:sub(4, 4)
         game.Players:Chat("respawn " .. letter)
         wait(1)
+        game.Players:Chat(".fixcam")
+        wait(0.1)
+        game.Players:Chat(".firstp")
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485, 4, 478)
         wait(0.3)
         game.Players:Chat("tp " .. letter .. " me")
@@ -190,6 +193,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         wait(0.3)
         game.Players:Chat(".rkick " .. letter)
         game.Players:Chat(".rkick " .. letter)
+        game.Players:Chat(".thirdp")
     elseif lowerMsg == ".rg" then
         local gearIDs = {212296936, 10468797, 253519495, 11999247, 111876831, 44115926, 68603151, 20064349, 88885539, 110789105}
         local randomGearID = gearIDs[math.random(1, #gearIDs)]
