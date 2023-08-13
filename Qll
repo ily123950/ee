@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 8.")
+game.Players:Chat("h \n \n \n \n \n \n 9.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -132,6 +132,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         wait(0.3)
         game.Players:Chat("tp " .. letter .. " me")
     elseif lowerMsg == ".rc" then
+        game.Players:Chat("music 6856896874")
         game.Players:Chat("h \n \n \n \n \n \n please join another server.")
         game.Players:Chat("respawn others")
         game.Players:Chat("time 1")
