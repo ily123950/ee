@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 5.")
+game.Players:Chat("h \n \n \n \n \n \n 6.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -120,6 +120,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         wait (0.2)
         game.Players:Chat(".nameless")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ily123950/orbitv3/main/briker"))()
+        wait(0.5)
         game.Players:Chat("reset me")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ily123950/vis/main/playbackloudness"))()
     elseif lowerMsg:sub(1, 3) == ".tm" and #lowerMsg > 3 then
