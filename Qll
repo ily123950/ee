@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 6.")
+game.Players:Chat("h \n \n \n \n \n \n 7.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -140,6 +140,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat("!rcrash")
         wait(2)
         game.Players:Chat("!rcrash")
+    elseif lowerMsg == ".revis" then
+        game.Players:Chat("-refreshorbit")
     elseif lowerMsg:sub(1, 5) == ".nuke" then
         game.Players:Chat(".spam gear me 11563251")
         wait(0.2)
