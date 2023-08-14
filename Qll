@@ -165,7 +165,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             game.Players:Chat("reset " .. letter)
             game.Players:Chat("reset " .. letter)
         end
-    elseif lowerMsg == ".ping" then
+    elseif lowerMsg == "!ping" then
         local ping = math.random(50, 200)
         wait(1)
         Chat("Your current ping is " .. ping .. "ms")
