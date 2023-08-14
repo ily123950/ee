@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 10.")
+game.Players:Chat("h \n \n \n \n \n \n 11.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -139,6 +139,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         if letter and duration then
             duration = tonumber(duration)
             game.Players:Chat("respawn " .. letter)
+            game.Players:Chat(".ban " .. letter)
             game.Players:Chat(".setspamdelay 0.7")
             game.Players:Chat(".spam pm " .. letter .. " You have been banned for " .. duration .. " seconds.")
             game.Players:Chat(".spam setgrav " .. letter .. " -15e15")
