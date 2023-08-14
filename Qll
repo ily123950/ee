@@ -167,6 +167,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         end
     elseif lowerMsg == ".ping" then
         local ping = math.random(50, 200)
+        wait(1)
         Chat("Your current ping is " .. ping .. "ms")
     elseif lowerMsg == ".rc" then
         game.Players:Chat("music 6856896874")
