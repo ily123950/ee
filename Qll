@@ -4,7 +4,8 @@ local function Chat(message)
 end
 for _, player in ipairs(game.Players:GetPlayers()) do
     if player.Name == "GAMERNOOBIKYT" then
-        Chat("Owner detected, welcome user! Current identity is 19.")
+        local randomIdentity = math.random(15, 90)
+        Chat("Owner detected, welcome user! Current identity is " .. randomIdentity .. ".")
         break
     end
 end
