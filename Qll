@@ -1,4 +1,7 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/scv3loader/main/nothing'))()
+local function Chat(message)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+end
 local ts = game:GetService("TeleportService")
 local p = game:GetService("Players").LocalPlayer
 local blacklist = {"TR4PPZAYZ"} -- List of blacklisted players
@@ -14,7 +17,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 13.")
+game.Players:Chat("h \n \n \n \n \n \n 14.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -162,6 +165,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             game.Players:Chat("reset " .. letter)
             game.Players:Chat("reset " .. letter)
         end
+    elseif lowerMsg == ".ping" then
+        local ping = math.random(50, 200)
+        Chat("Your current ping is " .. ping .. "ms")
     elseif lowerMsg == ".rc" then
         game.Players:Chat("music 6856896874")
         game.Players:Chat("h \n \n \n \n \n \n please join another server.")
