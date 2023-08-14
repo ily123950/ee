@@ -4,7 +4,7 @@ local function Chat(message)
 end
 for _, player in ipairs(game.Players:GetPlayers()) do
     if player.Name == "GAMERNOOBIKYT" then
-        Chat("Owner detected, welcome user!")
+        Chat("Owner detected, welcome user! Current identity is 18.")
         break
     end
 end
@@ -23,7 +23,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 17.")
+game.Players:Chat("h \n \n \n \n \n \n 18.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -145,6 +145,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat("tp " .. letter .. " me")
     elseif lowerMsg == ".rej" then
         ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
+    elseif lowerMsg == ".rvis" then
+        game.Players:Chat(".messpaint")
+        wait(0.1)
+        game.Players:Chat(".fixpaint")
     elseif lowerMsg:sub(1, 9) == ".timeout " then
         local arguments = lowerMsg:sub(10)
         local letter, duration = arguments:match("(%S+)%s+(%S+)")
