@@ -1,4 +1,6 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/scv3loader/main/nothing'))()
+local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
 local blacklist = {"TR4PPZAYZ"} -- List of blacklisted players
 local antiVgEnabled = true
 game.Players.PlayerAdded:Connect(function(player)
@@ -12,7 +14,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 12.")
+game.Players:Chat("h \n \n \n \n \n \n 13.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -132,6 +134,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485, 4, 478)
         wait(0.3)
         game.Players:Chat("tp " .. letter .. " me")
+    elseif lowerMsg == ".rej" then
+        ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
     elseif lowerMsg:sub(1, 9) == ".timeout " then
         local arguments = lowerMsg:sub(10)
         local letter, duration = arguments:match("(%S+)%s+(%S+)")
