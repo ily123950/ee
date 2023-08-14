@@ -228,7 +228,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         wait(0.2)
         game.Players:Chat(".punish2 " .. letter)
         game.Players:Chat(".pm " .. letter .. " sorry, just a test.")
-    elseif lowerMsg:sub(1, 2) == ".d" and #lowerMsg > 2 then
+    elseif lowerMsg:sub(1, 2) == ".rk" and #lowerMsg > 2 then
         local letter = lowerMsg:sub(4, 4)
         game.Players:Chat("respawn " .. letter)
         wait(1)
