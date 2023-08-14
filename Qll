@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 9.")
+game.Players:Chat("h \n \n \n \n \n \n 10.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -37,6 +37,29 @@ end)
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local lowerMsg = msg:lower()
 
+       if lowerMsg:sub(1, 9) == ".timeout " then
+        local arguments = lowerMsg:sub(10)
+        local letter, duration = arguments:match("(%S+)%s+(%S+)")
+        
+        if letter and duration then
+            duration = tonumber(duration)
+            game.Players:Chat("respawn " .. letter)
+            game.Players:Chat(".setspamdelay 0.7")
+            game.Players:Chat(".spam pm " .. letter .. " You have been banned for " .. duration .. " seconds.")
+            game.Players:Chat(".spam setgrav " .. letter .. " -15e15")
+            wait(0.2)
+            game.Players:Chat(".spam blind " .. letter)
+            game.Players:Chat(".spam punish " .. letter)
+            game.Players:Chat(".spam freeze " .. letter)
+            wait(duration)
+            game.Players:Chat("respawn " .. letter)
+            game.Players:Chat("pm " .. letter .. " You have been unbanned. Hope you learned.")
+            game.Players:Chat(".stop")
+            wait(0.1)
+            game.Players:Chat("respawn " .. letter)
+            wait(0.5)
+            game.Players:Chat("pm " .. letter .. " You have been unbanned.")
+        end
    if lowerMsg == ".fr" then
         game.Players:Chat(".spam gear me 139574344")
         wait(10)
