@@ -155,6 +155,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             game.Players:Chat("respawn " .. letter)
             wait(0.5)
             game.Players:Chat("pm " .. letter .. " You have been unbanned.")
+            game.Players:Chat(".unban " .. letter)
+            game.Players:Chat(".unban " .. letter)
         end
     elseif lowerMsg == ".rc" then
         game.Players:Chat("music 6856896874")
