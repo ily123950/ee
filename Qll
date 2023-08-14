@@ -144,7 +144,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     elseif lowerMsg == ".revis" then
         game.Players:Chat("-refreshorbit")
     elseif lowerMsg == ".music" then
-    game.Players:Chat("music 142376088")
+    game.Players:Chat("music 6819593773")
     elseif lowerMsg:sub(1, 5) == ".nuke" then
         game.Players:Chat(".spam gear me 11563251")
         wait(0.2)
