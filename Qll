@@ -24,7 +24,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 19.")
+game.Players:Chat("h \n \n \n \n \n \n 20.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -147,8 +147,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     elseif lowerMsg == ".rej" then
         ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
     elseif lowerMsg == ".rvis" then
-        game.Players:Chat(".messpaint")
         game.Players:Chat(".fixpaint")
+        wait(0.1)
+        game.Players:Chat(".messpaint")
+        game.Players:Chat("unpaint all")
     elseif lowerMsg:sub(1, 9) == ".timeout " then
         local arguments = lowerMsg:sub(10)
         local letter, duration = arguments:match("(%S+)%s+(%S+)")
