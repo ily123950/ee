@@ -2,11 +2,12 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/scv3loader/
 local function Chat(message)
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 end
-game.Players.PlayerAdded:Connect(function(player)
+for _, player in ipairs(game.Players:GetPlayers()) do
     if player.Name == "GAMERNOOBIKYT" then
         Chat("Owner detected, welcome user!")
+        break
     end
-end)
+end
 local ts = game:GetService("TeleportService")
 local p = game:GetService("Players").LocalPlayer
 local blacklist = {"TR4PPZAYZ"} -- List of blacklisted players
@@ -22,7 +23,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 15.")
+game.Players:Chat("h \n \n \n \n \n \n 16.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
