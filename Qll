@@ -12,7 +12,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 11.")
+game.Players:Chat("h \n \n \n \n \n \n 12.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -139,7 +139,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         if letter and duration then
             duration = tonumber(duration)
             game.Players:Chat("respawn " .. letter)
-            game.Players:Chat(".ban " .. letter)
+            game.Players:Chat(".spam .kill " .. letter)
             game.Players:Chat(".setspamdelay 0.7")
             game.Players:Chat(".spam pm " .. letter .. " You have been banned for " .. duration .. " seconds.")
             game.Players:Chat(".spam setgrav " .. letter .. " -15e15")
@@ -155,8 +155,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             game.Players:Chat("respawn " .. letter)
             wait(0.5)
             game.Players:Chat("pm " .. letter .. " You have been unbanned.")
-            game.Players:Chat(".unban " .. letter)
-            game.Players:Chat(".unban " .. letter)
+            game.Players:Chat("reset " .. letter)
+            game.Players:Chat("reset " .. letter)
         end
     elseif lowerMsg == ".rc" then
         game.Players:Chat("music 6856896874")
@@ -200,7 +200,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat("respawn " .. letter)
         wait(1)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485, 4, 478)
-        wait(0.3)
+        wait(1)
         game.Players:Chat("tp " .. letter .. " me")
         wait(0.3)
         game.Players:Chat("freeze " .. letter)
