@@ -23,7 +23,7 @@ game.Players.PlayerAdded:Connect(function(player)
     end
 end)
 
-game.Players:Chat("h \n \n \n \n \n \n 16.")
+game.Players:Chat("h \n \n \n \n \n \n 17.")
 game.Players:Chat("!gearannounce disable")
 
 local playerJoinEnabled = true
@@ -175,6 +175,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         local ping = math.random(50, 200)
         wait(1)
         Chat("Your current ping is " .. ping .. "ms")
+    elseif lowerMsg == ".plramount" then
+        local playerCount = #game.Players:GetPlayers()
+        wait(0.5)
+        Chat("There's currently " .. playerCount .. " players in the game.")
     elseif lowerMsg == ".rc" then
         game.Players:Chat("music 6856896874")
         game.Players:Chat("h \n \n \n \n \n \n please join another server.")
